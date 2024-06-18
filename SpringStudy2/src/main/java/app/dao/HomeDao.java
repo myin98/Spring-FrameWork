@@ -20,7 +20,7 @@ public class HomeDao {
 	}
 	
 	public List gugudanOne(int dan) {
-		List<HashMap> list = session.selectList("sql.dan");
+		List<HashMap> list = session.selectList("sql.dan", dan);
 		
 		return list;
 	}

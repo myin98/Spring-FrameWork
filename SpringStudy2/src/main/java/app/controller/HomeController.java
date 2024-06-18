@@ -1,11 +1,9 @@
 package app.controller;
 
 
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.ibatis.session.SqlSession;
-import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -43,7 +41,6 @@ public class HomeController {
 	@Autowired
 	private SqlSession session;
 	
-	//데이터 베이스 연결및 테스트
 	@GetMapping("/test")
 	public String test() {
 		int no = session.selectOne("sql.test");
