@@ -19,10 +19,10 @@ public class MybatisConfig {
 	public DataSource dataSource() {   // DB JDBC 접속 정보
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		
-			dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
-			dataSource.setUrl("jdbc:mariadb://localhost:23306/edu");
-			dataSource.setUsername("root");
-			dataSource.setPassword("1234");
+		dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
+		dataSource.setUrl("jdbc:mariadb://localhost:23306/edu");
+		dataSource.setUsername("root");
+		dataSource.setPassword("1234");
 		
 		return dataSource;
 	}

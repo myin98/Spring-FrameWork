@@ -6,8 +6,8 @@
 <title>계산기</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="/SpringStudy02/resources/calc.js"></script>
-<link href="/SpringStudy02/resources/calc.css" rel="stylesheet">
+<script src="./resources/calc.js"></script>
+<link href="./resources/calc.css" rel="stylesheet">
 <style>
     body {background-color: #2d2521;}
   </style>
@@ -15,7 +15,7 @@
 <body>
 	<div class="container text-center mt-3">
 	  <h1>계산기</h1>
-		<form action="" method="post">
+		<form action="" method="get">
 			<div class="input-group mb-3">
 				<input type="hidden" id="mark" name="mark">
 				<input type="number" class="text-start fs-2 form-control" id="value" name="value" placeholder="0" readonly="readonly">
@@ -35,16 +35,16 @@
 		      <td>=</td><td>7</td><td>8</td><td>9</td>
 		    </tr>
 		    <tr>
-					<td>C</td><td>4</td><td>5</td><td>6</td>
+			  <td>C</td><td>4</td><td>5</td><td>6</td>
 		    </tr>
 		    <tr>
 		      <td>0</td><td>1</td><td>2</td><td>3</td>
 		    </tr>
 		  </tbody>
 		</table>
-<!-- ë°ë³µ ìì -->
+<!-- 반복 시작 -->
 		<ol class="list-group" id="history"></ol>
-<!-- ë°ë³µ ë -->
+<!-- 반복 끝 -->
 	</div>
 </body>
 </html>
