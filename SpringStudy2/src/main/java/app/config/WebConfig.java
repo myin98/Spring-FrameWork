@@ -7,7 +7,7 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		
-		return null; //외부 설정 내용 등록 (mybatis)
+		return new Class[] {MybatisConfig.class}; //외부 설정 내용 등록 (mybatis)
 	}
 
 	@Override
