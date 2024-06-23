@@ -40,17 +40,29 @@ public class ViewController {
 	@GetMapping("/detail")
 	public String detail(Model model, HttpServletRequest req) {
 		
+		
 		String title = req.getParameter("title");
 		String content = req.getParameter("content");
-
-		TempDTO dto = TempDTO.builder().build();
-		dto.setTitle(title);
-		dto.setContent(content);
+		
+		
+//		TempDTO dto2 = new TempDTO();  //NoArgsConstructor
+		TempDTO dto = TempDTO.builder()  //AllArgsConstructor
+				.title(title)
+				.content(content)
+				.accept(true)
+				.build();
+		
+	
+		
+//		session.update("");
+//		session.delete("");
+//		dto = session.selectOne("sql.findOne", dto);
 		
 		session.insert("sql.save", dto);
 		
 		model.addAttribute("title", title);
 		model.addAttribute("content", content);
+		
 		
 		return "detail";
 	}

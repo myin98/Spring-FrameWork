@@ -24,14 +24,14 @@
 	</select>
 	
 	<insert id="save" parameterType="com.spring.dto.TempDTO">
-		INSERT INTO `temp1`   <!-- 0 --> 
-			(`title`, `content`) 
+		INSERT INTO `temp1`    <!-- 0 --> 
+			(`title`, `content` , `accept`) 
 		VALUE 
-			(#{title}, #{content})
+			(#{title}, #{content} , #{accept})
 			
-		<!-- <selectKey keyProperty="no" resultType="int" order="AFTER">
+		 <!-- <selectKey keyProperty="no" resultType="int" order="AFTER">
     		SELECT LAST_INSERT_ID() AS no
-		</selectKey> -->
+		</selectKey>  -->
 	</insert>
   
   	<update id="edit" parameterType="com.spring.dto.TempDTO">

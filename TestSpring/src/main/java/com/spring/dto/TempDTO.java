@@ -1,13 +1,13 @@
 package com.spring.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Setter
-@Getter
-@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 @Builder
 public class TempDTO {
 	
