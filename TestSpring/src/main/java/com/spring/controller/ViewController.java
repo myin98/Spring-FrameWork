@@ -32,8 +32,9 @@ public class ViewController {
 	}
 	
 	@GetMapping("/list")
-	public String list() {
-			
+	public String list(Model model) {
+
+		model.addAttribute("list", findAll(TempDTO.builder().build()));
 		return "list";
 	}
 	
@@ -66,6 +67,11 @@ public class ViewController {
 		
 		return "detail";
 	}
+	
+	public List<TempDTO> findAll(TempDTO dto){
+		return session.selectList("sql.findAll", dto);
+	}
+	
 	
 	@GetMapping("/new")
 	public String newp(Model model, HttpServletRequest request) {	
